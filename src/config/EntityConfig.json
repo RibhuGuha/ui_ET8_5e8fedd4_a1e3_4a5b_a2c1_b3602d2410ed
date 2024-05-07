@@ -1,0 +1,586 @@
+{
+        "otherdetails": [
+                        {
+                            "key": "OtherDetailsId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "ManufacturingDate",
+                            "label": "ManufacturingDate",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "ManufacturingDate is required"
+                            ]
+                        },
+                        {
+                            "key": "AvailabilityStatus",
+                            "label": "AvailabilityStatus",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.AvailabilityStatus",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "AvailabilityStatus is required"
+                            ]
+                        },
+                        {
+                            "key": "Size",
+                            "label": "Size",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Single",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Size is required"
+                            ]
+                        },
+                        {
+                            "key": "UnitOfMeasurement",
+                            "label": "UnitOfMeasurement",
+                            "type": "dropdown",
+                                "valueId": "Value",
+                                "nameId": "Name",
+                                "contentId": "Name",
+                                "source": "Model.Size",
+                                "editable": true,
+                                "validators": [
+                                    "required",
+                                    "isNumber"
+                                ],
+                                "validationMessages": [
+                                    "UnitOfMeasurement is required"
+                                ]
+                            }
+        ]
+,        "orderitem": [
+                        {
+                            "key": "Order_item_id",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Order_item_quantity",
+                            "label": "Order_item_quantity",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Order_item_quantity is required"
+                            ]
+                        },
+                        {
+                            "key": "Order_item_price",
+                            "label": "Order_item_price",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Decimal",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Order_item_price is required"
+                            ]
+                        },
+                        {
+                            "key": "RMA_number",
+                            "label": "RMA_number",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "RMA_number is required"
+                            ]
+                        },
+                        {
+                            "key": "RMA_issued_by",
+                            "label": "RMA_issued_by",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "RMA_issued_by is required"
+                            ]
+                        },
+                        {
+                            "key": "RMA_issued_date",
+                            "label": "RMA_issued_date",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "RMA_issued_date is required"
+                            ]
+                        },
+                        {
+                            "key": "Other_order_item_details",
+                            "label": "Other_order_item_details",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Other_order_item_details is required"
+                            ]
+                        },
+                        {
+                            "key": "Order_item_status",
+                            "label": "Order_item_status",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Order_item_status is required"
+                            ]
+                        },
+                    {
+                        "key": "OrderItemOIProduct",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "producttype": [
+                        {
+                            "key": "PtId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "ProductTypeName",
+                            "label": "ProductTypeName",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "ProductTypeName is required"
+                            ]
+                        },
+                        {
+                            "key": "ProductTypeDesc",
+                            "label": "ProductTypeDesc",
+                            "type": "text",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "ProductTypeDesc is required"
+                                ]
+                            }
+        ]
+,        "product": [
+                        {
+                            "key": "Product_id",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Return_merchandise_authorization_nr",
+                            "label": "Return_merchandise_authorization_nr",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Return_merchandise_authorization_nr is required"
+                            ]
+                        },
+                        {
+                            "key": "Name",
+                            "label": "Name",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Name is required"
+                            ]
+                        },
+                        {
+                            "key": "Color",
+                            "label": "Color",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Color is required"
+                            ]
+                        },
+                        {
+                            "key": "Size",
+                            "label": "Size",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Size is required"
+                            ]
+                        },
+                        {
+                            "key": "Product_description",
+                            "label": "Product_description",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Product_description is required"
+                            ]
+                        },
+                        {
+                            "key": "Manufacturer",
+                            "label": "Manufacturer",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Manufacturer is required"
+                            ]
+                        },
+                        {
+                            "key": "Weight",
+                            "label": "Weight",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Single",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Weight is required"
+                            ]
+                        },
+                        {
+                            "key": "UnitOfMeasurement",
+                            "label": "UnitOfMeasurement",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.Weight",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "UnitOfMeasurement is required"
+                            ]
+                        },
+                    {
+                        "key": "ProductPType",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "ProductODetails",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "ProductBuyingPrice",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "ProductMainImage",
+                        "type": "keyid"
+                    },
+                    {
+                        "key": "MainImage",
+                        "label": "MainImage",
+                        "width": "30%",
+                        "type": "doc",
+                        "accept": ".JPG,.JPEG,.PNG",
+                        "editable": true,
+                        "validators": [
+                            "required"
+                        ],
+                        "validationMessages": [
+                            "Product MainImage is required"
+                        ]
+                    },
+                                    {
+                        "key": "ProductMainImagetwo",
+                        "type": "keyid"
+                    },
+                    {
+                        "key": "MainImagetwo",
+                        "label": "MainImagetwo",
+                        "width": "30%",
+                        "type": "doc",
+                        "accept": ".JPG,.JPEG,.PNG",
+                        "editable": true,
+                        "validators": [
+                            "required"
+                        ],
+                        "validationMessages": [
+                            "Product MainImagetwo is required"
+                        ]
+                    },
+                                    {
+                        "key": "ProductOtherImages",
+                        "type": "keyid"
+                    },
+                    {
+                        "key": "OtherImages",
+                        "label": "OtherImages",
+                        "width": "30%",
+                        "type": "doc",
+                        "accept": ".JPG,.JPEG,.PNG",
+                        "editable": true,
+                        "multiple": true,
+                        "validators": [
+                            "required"
+                        ],
+                        "validationMessages": [
+                            "Product OtherImages is required"
+                        ]
+                    },
+                                    {
+                        "key": "ProductProductVendor",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "ProductSellingPrice",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "productprice": [
+                        {
+                            "key": "PpId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Price",
+                            "label": "Price",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Decimal",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Price is required"
+                            ]
+                        },
+                        {
+                            "key": "DiscountGroup",
+                            "label": "DiscountGroup",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "DiscountGroup is required"
+                            ]
+                        },
+                                                {
+                            "key": "IsVatIncluded",
+                            "label": "IsVatIncluded",
+                            "type": "check",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "IsVatIncluded is required"
+                                ]
+                            }
+        ]
+,        "supplier": [
+                        {
+                            "key": "SId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "SupplierName",
+                            "label": "SupplierName",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "SupplierName is required"
+                            ]
+                        },
+                        {
+                            "key": "SupplierContact",
+                            "label": "SupplierContact",
+                            "type": "text",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "SupplierContact is required"
+                                ]
+                            }
+        ]
+,        "shipmentitem": [
+                        {
+                            "key": "Shipment_item_id",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Order_item_id",
+                            "label": "Order_item_id",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Order_item_id is required"
+                            ]
+                        },
+                    {
+                        "key": "ShipmentItemOrderItemShipment",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "productonboarding": [
+                        {
+                            "key": "PbId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Username",
+                            "label": "Username",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Username is required"
+                            ]
+                        },
+                        {
+                            "key": "Name",
+                            "label": "Name",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Name is required"
+                            ]
+                        },
+                        {
+                            "key": "Description",
+                            "label": "Description",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Description is required"
+                            ]
+                        },
+                        {
+                            "key": "Status",
+                            "label": "Status",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.OnBoardingStatus",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Status is required"
+                            ]
+                        },
+                        {
+                            "key": "LastStep",
+                            "label": "LastStep",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "LastStep is required"
+                            ]
+                        },
+                    {
+                        "key": "ProductOnBoardingProductInContext",
+                        "type": "keyid"
+                    }  
+                        ]
+}

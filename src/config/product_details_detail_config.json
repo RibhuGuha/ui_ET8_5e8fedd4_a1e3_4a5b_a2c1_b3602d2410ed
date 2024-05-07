@@ -1,0 +1,192 @@
+{
+
+"product": [
+    {
+        "key": "Product_id",
+        "type": "keyid"
+    }
+            ,{
+            "key": "ProductODetails",
+            "uicomponent": "otherdetailsodetails",
+            "nocreate": true
+        }
+
+    ,{
+        "key": "Name",
+        "label": "Name",
+        "type": "text",
+        "editable": true,
+        "validators": [
+            "required"
+        ],
+        "validationMessages": [
+            "Name is required"
+        ]
+    }
+    ,{
+        "key": "Product_description",
+        "label": "Product_description",
+        "type": "text",
+        "editable": true,
+        "validators": [
+            "required"
+        ],
+        "validationMessages": [
+            "Product_description is required"
+        ]
+    }
+    ,{
+        "key": "ProductPType",
+        "label": "PType",
+        "type": "dropdown",
+        "valueId": "PtId",
+        "nameId": "ProductTypeName",
+        "contentId": "ProductTypeName",
+        "source": "ProductType",
+        "uicomponent": "producttypeptype",
+        "create": true,
+        "editable": true,
+        "validators": [
+            "required"
+        ],
+        "validationMessages": [
+            "PType is required"
+        ]
+    }
+    ,{
+        "key": "ProductProductVendor",
+        "label": "ProductVendor",
+        "type": "dropdown",
+        "valueId": "SId",
+        "nameId": "SupplierName",
+        "contentId": "SupplierName",
+        "source": "Supplier",
+        "create": true,
+        "editable": true,
+        "validators": [
+            "required"
+        ],
+        "validationMessages": [
+            "ProductVendor is required"
+        ]
+    }
+    ,{
+        "key": "MainImage",
+        "label": "MainImage",
+        "type": "doc",
+        "accept": ".JPG,.JPEG,.PNG",
+        "editable": true,
+        "validators": [
+            "required"
+        ],
+        "validationMessages": [
+            "MainImage is required"
+        ]
+    }
+    ,{
+        "key": "MainImageTwo",
+        "label": "MainImageTwo",
+        "type": "doc",
+        "accept": ".JPG,.JPEG,.PNG",
+        "editable": true,
+        "validators": [
+            "required"
+        ],
+        "validationMessages": [
+            "MainImageTwo is required"
+        ]
+    }
+]
+
+,"producttypeptype": [
+    {
+        "key": "PtId",
+        "type": "keyid"
+    }
+
+    ,{
+        "key": "ProductTypeName",
+        "label": "ProductTypeName",
+        "type": "text",
+        "editable": true,
+        "validators": [
+            "required"
+        ],
+        "validationMessages": [
+            "ProductTypeName is required"
+        ]
+    }
+    ,{
+        "key": "ProductTypeDesc",
+        "label": "ProductTypeDesc",
+        "type": "text",
+        "editable": true,
+        "validators": [
+            "required"
+        ],
+        "validationMessages": [
+            "ProductTypeDesc is required"
+        ]
+    }
+]
+
+,"otherdetailsodetails": [
+    {
+        "key": "OtherDetailsId",
+        "type": "keyid"
+    }
+
+    ,{
+        "key": "ManufacturingDate",
+        "label": "ManufacturingDate",
+        "type": "date",
+        "editable": true,
+        "validators": [
+            "required"
+        ],
+        "validationMessages": [
+            "ManufacturingDate is required"
+        ]
+    }
+    ,{
+        "key": "AvailabilityStatus",
+        "label": "AvailabilityStatus",
+        "type": "date",
+        "editable": true,
+        "validators": [
+            "required"
+        ],
+        "validationMessages": [
+            "AvailabilityStatus is required"
+        ]
+    }
+    ,{
+        "key": "Size",
+        "label": "Size",
+        "type": "text",
+        "editable": true,
+        "validators": [
+            "required"
+                    , "isFloat"
+                    , "isPositive"
+        ],
+        "validationMessages": [
+            "Size is required"
+        ]
+    }
+    ,{
+        "key": "UnitOfMeasurement",
+        "label": "UnitOfMeasurement",
+        "type": "text",
+        "editable": true,
+        "validators": [
+            "required"
+                    , "isFloat"
+                    , "isPositive"
+        ],
+        "validationMessages": [
+            "UnitOfMeasurement is required"
+        ]
+    }
+]
+}
